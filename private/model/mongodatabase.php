@@ -17,4 +17,19 @@ function login($email,$password) {
         return array("auth"=>false,"id"=>"0");
     }
 }
+
+function create($email,$password,$firstname,$lastname) {
+    $db = connect();
+    $new = array("email"=>$email,"password"=>$password,"firstname"=>$firstname,"lastname"=>$lastname);
+    try {
+        $result = $db->users->insert($new,array('w'=>true));
+    } catch(Exception $e) {
+        return array("auth"=>false,"id"=>"0");
+    }
+    if (isset($result) && $result["ok"] == 1) {
+        return login($email,$password);
+    } else {
+        return array("auth"=>false,"id"=>"0");
+    }
+}
 ?>

@@ -9,10 +9,12 @@ if (isset($_SESSION['id'])) {
             $page = "home";
         } else if ($page != "home" && $page != "logout") {
             $page = "home";
-        }
+        }           
     } else {
         $page = "home";
     }
+} else if (isset($_GET["page"]) && htmlspecialchars($_GET["page"]) == "create") {
+    $page = "create";
 } else {
     $page = "login";
 }

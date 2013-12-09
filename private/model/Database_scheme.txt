@@ -82,4 +82,6 @@ users -> userid -> posts
                 -> phone (added later once phone numbers are verified) -> userid
 since email and phone and username are all unique, make then tables, so you can quickly find userid
 OR ---- have a second nosql / dynamoDB of username, email, phone to retrive userid
-    
+
+
+users stored in a location - friends access friends together, they tend to live near each other

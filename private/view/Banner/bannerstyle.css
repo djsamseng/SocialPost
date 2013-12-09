@@ -1,0 +1,79 @@
+body {
+    background: #808080;
+    margin: 0;
+}
+.body {}
+.banner-hold {
+    width: 100%;
+    min-width: 700px;
+    height: 50px;
+    border: 1px solid white;
+    background: #333;
+    text-align: center;
+}
+.banner-logo,.banner-element,.banner-user,.user-options,.user-profile,.dropdown {
+    height: 50px;
+    //border: 2px solid blue;
+       color: #FFFFFF;
+    float: left;
+}
+.banner-logo {
+    width: 15%;
+    min-width: 150px;
+    float: left;
+}
+.banner-element {
+    width: 10%;
+    min-width:50px;
+}
+.banner-user {
+    width: 15%;
+    min-width:150px;
+    float:right;
+    margin-right: 3px;
+}
+.user-options, .user-profile {
+    float: right;
+}
+.user-options {
+    width: 40px;
+}
+.user-profile {
+    width: 90px;
+}
+.dropdown-header,.dropdown-element,.dropdown-element-right {
+    width: 90px;
+}
+.user-profile:hover,.user-options:hover,.feed:hover,.messages:hover,.mapit:hover {
+    background: #484848;
+}
+.dropdown-header {
+    height: 50px;
+    width: 50px;
+}
+.dropdown-element,.dropdown-element-right {
+    height: 50px;
+    display: none;
+    background: #333;
+}
+.dropdown-element {
+    float: left
+}
+.dropdown-element-right {
+    float: right
+}
+.user-profile:hover > .dropdown-element-right {
+    display: block;
+}
+.user-options:hover > .dropdown-element-right {
+    display: block;
+}
+.feed:hover > .dropdown-element {
+    display: block;
+}
+.messages:hover > .dropdown-element {
+    display: block;
+}
+.mapit:hover > .dropdown-element {
+    display: block;
+}

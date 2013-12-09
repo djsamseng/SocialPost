@@ -1,0 +1,85 @@
+user-public -> locationa -> locationb -> location c... -> posts -> post1 -> date -> text
+                                                                           -> likes
+                                                                           -> relevance
+                        -> text
+                        -> location
+    -> info
+    -> friends
+    -> picture
+
+user-friends -> locationa -> locationb -> location c... -> posts -> post -> date -> text
+                                                                                  -> likes
+                                                                                  -> relevance
+
+
+location -> date
+                
+
+
+locationa -> locationb0                     -> locationc0
+        -> locationb1
+        -> locationb2
+        ->locationbdate =>pointertopost
+
+
+locations - public
+                                            ->likes -> table of user ids
+                                            ->comments -> table of comments
+                                            ->number of posts
+                                            ->userid (use this to delete pointer from user when expired)
+                                            ->pointer to it (if sharing posts feature)
+                                            ->expiration_date (if queried beyond date, delete it and all pointers to it)
+0 -> 00 -> 000 -> 0000 ... -> posts -> post -> id = 0000..._A_I_Num (largest A_I_Num is newest/algorithm to switch if liked alot)
+               -> 0001
+               -> 0002
+        -> 001 -> 0010
+               -> 0011
+               -> 0012
+        -> 002 -> 0020
+               -> 0021
+               -> 0022
+  -> 01 -> 010 -> 0100
+               -> 0101
+               -> 0102
+        -> 011 -> 0110
+               -> 0111
+               -> 0112
+        -> 012 -> 0120
+               -> 0121
+               -> 0122
+  -> 02 -> 020 -> 0200
+               -> 0201
+               -> 0202
+        -> 021 -> 0210
+               -> 0211
+               -> 0212
+        -> 022 -> 0220
+               -> 0221
+               -> 0222
+        -> posts -> post -> id = 00_A_I_Num
+                         -> Same as above
+        -> number of posts
+        Query in 00 takes top posts in each of 000,001,002 (not 0000 or below) by number of posts. Ex: if 000 has 5 posts but 001 has 20 posts, top 1 post will be taken from 000 and top 4 from 001
+
+
+
+userid -> posts -> public -> pointer to last post public
+                           -> ...
+                           -> pointer to most recent public post ex: 0103123_35234
+                -> friends -> pointer to last post marked friends
+                           -> ...
+                           -> pointer to most recent post marked friends
+                -> private -> pointer to last post marked private
+                           -> ...
+                           -> pointer to most recent post marked private
+
+users -> userid -> posts
+                -> username -> userid
+                -> email -> userid
+                -> password
+                -> firstname
+                -> lastname
+                -> phone (added later once phone numbers are verified) -> userid
+since email and phone and username are all unique, make then tables, so you can quickly find userid
+OR ---- have a second nosql / dynamoDB of username, email, phone to retrive userid
+    

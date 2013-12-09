@@ -1,0 +1,137 @@
+html {height:100%;}
+
+body {
+font-family: "Helvetica Neue",Arial,sans-serif;
+background: #8CE2FF;
+margin-top:0;
+}
+a {
+border-radius:3px;
+background-color: rgba(0,0,0,0.4);
+color: #FFFFFF;
+text-decoration:none;
+padding: 8px;
+}
+input.text {
+    padding: 3px;
+    border-radius:3px;
+    width: 150px;
+}
+#back {
+    /* background: -webkit-radial-gradient(red, green, blue);  Safari
+    background: -o-radial-gradient(red, green, blue); For Opera 11.1 to 12.0
+    background: -moz-radial-gradient(red, green, blue); For Firefox 3.6 to 15 */
+    background: radial-gradient(#FFFFFF 10%, #8CE2FF 70%); /* Standard syntax (must be last) */
+    position: relative; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height:600px;
+    text-align:center;
+ 
+}
+#close {
+    position:relative;
+    top: 25px;
+    color:#FFFFFF;
+    z-index:0;
+}
+#footer {
+    height:100px;
+    position: relative;
+}
+#footer-content {
+    position: absolute;
+    width: 100%;
+    text-align:center;
+    bottom: 0;
+}
+#top {
+    //position: fixed;
+    //top: 0;
+    //left: 0;
+    top: 50px;
+    width: 100%;
+    background: #333;
+    box-shadow: 0px 2px 2px 0px #888888;
+    color: #FFFFFF;
+}
+
+#loginbox {
+    border-radius: 5px;
+    border: 2px ;
+    display: inline-block;
+    padding: 5px;
+    background: #333;
+    color: #FFFFFF;
+    height: 120px;
+    width: 300px;
+    position: relative;
+    top: 40px;
+}
+h1 {
+    text-align: center;
+    vertical-align:middle;
+    line-height: 50px;
+    margin: 0;
+}
+h2 {
+    margin: 5px;
+}
+
+
+
+#cloud {
+	width: 650px; height: 220px;
+	
+	background: #f2f9fe;
+	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	
+	position: relative;
+	margin: 120px auto 20px;
+}
+
+#cloud:after, #cloud:before {
+	content: '';
+	position: absolute;
+	background: #f2f9fe;
+	z-index: -1;
+}
+
+#cloud:after {
+	width: 200px; height: 200px;
+	top: -90px; left: 80px;
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+#cloud:before {
+	width: 360px; height: 360px;
+	top: -140px; right: 90px;
+	
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+}
+
+.shadow {
+	width: 550px;
+	position: absolute; 
+    bottom: -10px; 
+	background: #000;
+	z-index: -1;
+    left: 50px;
+	
+	box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 25px 8px rgba(0, 0, 0);
+}

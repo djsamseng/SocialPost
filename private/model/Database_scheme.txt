@@ -85,3 +85,70 @@ OR ---- have a second nosql / dynamoDB of username, email, phone to retrive user
 
 
 users stored in a location - friends access friends together, they tend to live near each other
+
+A shard has a single collection, which uses geo to find nearby posts
+Scaling -> Beginning, all information is in a single shard -> everything is in a single collection
+        -> expanding to two shards - split into two areas by geo, each shard has a single collection, one of one area, the other of the other area, a third collection is placed in overhead that stores the top posts of both collections
+        -> expanding to four shard - split both shards in two by geo, each shard single collection each of a fourth of the total area
+
+
+
+ Shard 1
+    Massachusetts
+    -all posts in Mass
+ Shard 2
+    Maine
+ Shard 3
+    NH
+ Shard 4
+    Vermont
+ Shard 5
+    Rhode Island
+ Shard 6
+    Conneticut
+ In one of shard 1-6 has New England collection which holds the top 200 posts of shard 1-6
+ Shards 7-15 has New York - DC region
+ Shard 16-20 has Virginia - South Carolina - Tennessee 
+ 
+ In one of shares 1-20 has East Coat collections which holds top 200 posts of New englad, NY-DC region, and Virginia, SC, TN collections
+
+ One collection for world. When it fills up, divide it into two collections by geo and create a third collection for top posts of both of those collections, when one of those fills up, divide that collection into two collections by geo
+Corner case - person wants data that exists in two shards, (not real example (since computer auto divides): person lives near border of MA and NH and wants local data
+    Solution - each shard holds boundary gps coordinates and knows id of shard to each of its sides
+
+Friends' posts - Two cases:
+    Case 1: small region (under 50 miles radius, can be decreased when busier):
+        
+
+Search through friend list. For each friend, find posts where geo matches (~1000 queries)
+
+-Save locations of posts of each user in an array in the user document of the users collections.  This enables the query to find friends with posts near them
+Denormalization - all posts are saved in user database and in location database
+
+
+db.users.insert({"name":"Sam2","geo":{type:"Point",coordinates:[200,250]}})
+
+db.users.find({"geo":{$near:{$geometry:{type:"Point",coordinates:[199,249]}},$maxDistance:10}})
+
+db.users.ensureIndex({"geo":"2dsphere"})
+
+
+db.users.insert({name:"Sam4", post2:{p1:{loc : { type : "Point",coordinates : [ 40 , 5 ]}},p2:{loc: {type: "Point",coordinates:[60,60]}}}})
+db.users.find({loc:{$near:{$geometry:{type:"Point",coordinates:[40,5]}},$maxDistance:10}})
+
+db.users.ensureIndex({post2:{p1:{loc:"2dsphere"}}})
+
+db.users.insert({name:"Sam5", post3:[{loc : { type : "Point",coordinates : [ 40 , 5 ]}},{loc: {type: "Point",coordinates:[60,60]}}]})
+db.users.ensureIndex({"post3.loc":"2dsphere"})
+
+db.users.find({"post3":{$in:{$near:{$geometry:{type:"Point",coordinates:[40,5]}},$maxDistance:10}}})
+
+
+THIS WORKS --------
+
+db.users.insert({name:"Sam5", post3:[{loc : { type : "Point",coordinates : [ 40.0000000 , 5 ]}},{loc: {type: "Point",coordinates:[60,60]}}]})
+db.users.insert({name:"Sam6", post3:[{loc : { type : "Point",coordinates : [ 40.0000001 , 5 ]}},{loc: {type: "Point",coordinates:[61,60]}}]})
+db.users.ensureIndex({"post3.loc":"2dsphere"})
+
+db.users.find({"post3.loc":{$near:{$geometry:{type:"Point",coordinates:[40,5]}},$maxDistance:10000}}) ---THIS WORKS
+

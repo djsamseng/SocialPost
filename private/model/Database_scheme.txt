@@ -132,5 +132,5 @@ db.users.insert({name:"Sam5", post3:[{loc : { type : "Point",coordinates : [ 40.
 db.users.insert({name:"Sam6", post3:[{loc : { type : "Point",coordinates : [ 40.0000001 , 5 ]}},{loc: {type: "Point",coordinates:[61,60]}}]})
 db.users.ensureIndex({"post3.loc":"2dsphere"})
 
-db.users.find({"post3.loc":{$near:{$geometry:{type:"Point",coordinates:[40,5]}},$maxDistance:10000}}) ---THIS WORKS
+db.users.find({"post3.loc":{$near:{$geometry:{type:"Point",coordinates:[60,60]}},$maxDistance:10000000000}}) ---THIS WORKS
 

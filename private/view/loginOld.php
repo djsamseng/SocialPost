@@ -1,32 +1,14 @@
-<?php render("header",array("title"=>"Login","style"=>"loginstyle.css"));?>
+<?php render("header",array("title"=>"Login","style"=>"loginstyleOld.css"));?>
 <?php render("banner");?>
     <div id="back">
-        <div id="cloudhold">
-        <div id="cloud">
-        </div>
-        </div>
-
+        
         <div id="close">
             <div id="mainleft">
                 <div id="clouda"></div>
                             </div>
             <div id="maincenter">
-                <br><br><br><br><br><br><br><br><br><br><br>
+                <div id="cloud">
                 <h1>SocialPost</h1>
-                <div id="outsidepost">
-                <div id="postholder">
-                    <div id="posts">
-                        Post1 <br>
-                        Post2 <br>
-                        Post3 <br>
-                    </div>
-                    <div id="postform">
-                        <form>
-                            <input type="text" class="postforminput" placeholder="Post Here">
-                            <input type="submit" class="postformsubmit" value="Post">
-                        </form>
-                    </div>
-                </div>
                 </div>
             </div>
             <div id="mainright">
@@ -53,5 +35,5 @@
             </div>
             <?php render("logintail");?>
         </div>
-    </div>
+    </div>    
 <?php render('footer');?>

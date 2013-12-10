@@ -1,15 +1,17 @@
-<?php render("header",array("title"=>"Logout Successful","style"=>"login4style.css"));?>
+<?php render("header",array("title"=>"Logout Successful","style"=>"loginstyle.css"));?>
 <?php render("banner");?>
     <div id="back">
-
+        <div id="cloudhold">
+            <div id="cloud">
+            </div>
+        </div>
         <div id="close">
             <div id="mainleft">
                 <div id="clouda"></div>
                             </div>
             <div id="maincenter">
-                <div id="cloud">
-                    <h1><div id="logoutS">Logout Successfull</div></h1>
-                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h1><div id="logoutS">Logout Successfull</div></h1>
             </div>
             <div id="mainright">
                 <div id="loginbox">

@@ -1,0 +1,430 @@
+html {height: 100%;}
+body {
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    background: #FFFFFF;
+    margin: 0;
+    //height: inherit;
+    //min-height: 1600px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+h1 {
+    text-align: center;
+    vertical-align:middle;
+    line-height: 80px;
+    margin: 0;
+
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 0;
+    color: #3399FF;
+}
+input {
+    font-size: 120%;
+}
+.tail {
+    border-radius:3px;
+    background: #3399FF;
+    background-color: rgba(0,0,0,0.4);
+    color: #FFFFFF;
+    text-decoration:none;
+    padding: 8px;
+}
+
+#back {
+    /* background: -webkit-radial-gradient(red, green, blue);  Safari
+    background: -o-radial-gradient(red, green, blue); For Opera 11.1 to 12.0
+    background: -moz-radial-gradient(red, green, blue); For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FDFEFF, #FDFEFF, #FDFEFF); /* Standard syntax (must be last) */
+    position: relative; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    min-width: 1115px;
+    height:100%;
+}
+#close {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    border: 1px solid blue;
+}
+#mainleft,#maincenter,#mainright {
+    position:relative;
+    color:#FFFFFF;
+    height: 90%;
+    float: left;
+    color: #3399FF;
+}
+
+#mainleft, #mainright {
+    width: 18%;
+    border: 2px solid grey;
+    margin: 0px;
+    background: #F0F0F0;
+    top: 50px;
+}
+#mainleft {
+    width: 30%;
+}
+#profileprofpicholder {
+    //width: 90%;
+    border: 3px solid white;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align:center;
+}
+.profileprofpic {
+    width: 90%;
+}
+.profileprofsubinfo {
+    color: #333;
+    margin: 10px 5% 10px 5%;
+    padding-left: 5%;
+    border: 1px solid grey;
+    border-radius: 5px;
+
+}
+#maincenter {
+    width: 69%;
+    background: #FFFFFF;
+    margin: 0px;
+    margin-top: 0;
+    top: 52px;
+}
+.coverpicture,.profilemenu,.allposts {
+    width: 97%;
+    margin-left:1%;
+    border: 2px solid grey;
+    //border-radius: 5px;
+}
+.coverpicture {
+    height: 100px;
+    margin-top: 20px;
+}
+
+/* -----  Profile Submenu ------ */
+.profilemenu {
+    width: 95%;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 2%;
+}
+.profmenuposts,.profmenuinfo,.profmenuphotos,.profmenufriends {
+    min-width: 50px;
+    height: 100%;
+    margin: 0 0 0 0;
+    background-color:#F0F0F0;
+    border: 1px solid #333;
+    //background-color:#3399FF;
+}
+.profmenuposts:hover,.profmenuinfo:hover,.profmenuphotos:hover,.profmenufriends:hover{
+    background-color: #FFFFFF;
+}
+.profmenuinfo {
+}
+.profmenuphotos {
+}
+.profmenufriends {
+}
+/* ----------------------------- */
+/* --------- Posts Submenu ------------*/
+.allposts {
+    min-height: 500px;
+    margin-top: 5px;
+    border: 1px solid yellow;
+}
+.writepost {
+    width: 80%;
+    //height: 80px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin-left: 2%;
+    margin-top: 10px;
+}
+.writepostsubmit {
+    background: #fee94f;
+    background: -webkit-linear-gradient(top,#fee94f 0,#fd9a0f 100%);
+    background: -moz-linear-gradient(top,#fee94f 0,#fd9a0f 100%);
+    background: linear-gradient(top,#fee94f 0,#fd9a0f 100%);
+    border: 1px solid #fa2;
+    border-radius: 5px;
+    //top: -50px;
+}
+.postholder {
+    width: 95%;
+    margin-top: 20px;
+    margin-left:2%;
+    color: #333;
+    border: 1px solid blue;
+}    
+.post-pic-thumb-holder {
+    height: 50px;
+    width: 50px;
+    border: 1px solid grey;
+    position: absolute;
+    text-align: center;
+}
+.post-pic-thumb {
+    max-height: 100%;
+    max-width: 100%;
+}
+.postbyname {
+    margin-left: 50px;
+    padding-left: 5px;
+    top: 5px;
+}
+.postbynametext {
+    color: #333;
+}
+.eachpost {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 3px 5px 3px 5px;
+    width: 60%;
+    margin-left: 50px;
+}
+.postdate {
+    text-align:right;
+    margin-right:10px;
+    font-size: 80%;
+}
+.postline {
+    border: 1px solid grey;
+    margin-top: 5px;
+    margin-left: 5%;
+    width: 90%;
+}
+/* --------- Friends Submenu -----------*/
+.friendshold {
+}
+.friendnamelink {
+    color: #333;
+}
+
+.friend-pic-thumb {
+    max-height: 100%;
+    max-width: 100%;;
+}
+.friend-pic-thumb-holder {
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+.friendname {
+}
+.friendbox {
+    height: 150px;
+    width: 200px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    float:left;
+}
+
+
+#mainright {
+    float: right;
+}
+
+/* --------- CHAT --------- */
+.chatholder {
+    position: fixed;
+    height: 300px;
+    width: 200px;
+    border: 1px solid grey;
+    bottom: 30px;
+    right: 1px;
+    background: #FFFFFF;
+    display:block;
+}
+.chatholderhidden {
+    display: none;
+}
+.chatheader {
+    width: 100%;
+    height: 30px;
+    color: #333;
+    background: #F0F0F0;
+    border-bottom: 1px solid grey;
+}
+.chatsearch {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+}
+.chatbox {
+    position: relative;
+    height: inherit;
+    width: 200px;
+    //border: 1px solid red;
+    float: right;
+    overflow-y: scroll;
+}
+/* --------- BOTTOM TOOLBAR --------- */
+/* --------- With JavaScript -------- */
+.bottomposition {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    min-width: 1115px;
+}
+.bottomholder {
+    width: 12%;
+    //left: 100%;
+    //border: 1px solid red;
+    position: relative;
+    height: inherit;
+    float: right;
+}
+.outsidetoolbar {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: white;
+    border: 1px solid grey;
+    color: #333;
+}
+
+
+
+/* --------- BANNER ------- */
+
+.banner-hold {
+    width: 100%;
+    min-width: 1115px;
+    height: 50px;
+    background: #333;
+    background: linear-gradient(top, #484848 50%, #333 100%);
+    text-align: center;
+    box-shadow: 0px 2px 2px 2px #333;
+    float: right;
+    position: absolute;
+    z-index:1;
+}
+.banner-logo,.banner-element,.banner-user,.user-options,.user-profile,.dropdown {
+    height: 50px;
+    color: #FFFFFF;
+    float: left;
+}
+.banner-logo {
+    width: 200px;
+    float: left;
+    text-align: center;
+    vertical-align:middle;
+    line-height: 50px;
+    margin-left: 5%;
+    //border: 1px solid blue;
+}
+.banner-element {
+    width: 10%;
+    min-width:70px;
+    //border: 1px solid blue;
+}
+.banner-user {
+    width: 15%;
+    min-width:290px;
+    float:right;
+    margin-right: 10%;
+}
+.banner-search {
+    text-align: center;
+    line-height: 50px;
+    vertical-align:middle;
+}
+.banner-search-input {
+    width: 100%;  
+}
+.banner-search-submit {
+    visibility: hidden;
+}
+.user-options, .user-profile {
+    float: right;
+}
+.user-options {
+    width: 80px;
+}
+.user-profile {
+    width: 190px;
+}
+.dropdown-header,.dropdown-element,.dropdown-element-right,.dropdown-header-profile {
+    width: 70px;
+    text-align: center;
+    vertical-align:middle;
+    line-height: 50px;
+    margin: 0;
+}
+.dropdown-header-profile {
+    width: 190px;
+}
+.user-profile:hover,.user-options:hover,.feed:hover,.messages:hover,.mapit:hover {
+    background: #484848;
+}
+.dropdown-header {
+    height: 50px;
+}
+/*.dropdown-element,.dropdown-element-right{
+    height: 50px;
+    display: none;
+    background: #333;
+    width: 150px;
+}*/
+a.drop {
+    display:none;
+}
+.dropdown-element {
+    float: left
+}
+.dropdown-element-right{
+    float: right
+}
+.user-profile:hover > .dropdown-element-right {
+    display: block;
+}
+.user-profile:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+    float: right;
+}
+.user-options:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+    float: right;
+}
+.feed:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+}
+.messages:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+}
+.mapit:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+}
+/* ----------- ----------- */
+
+

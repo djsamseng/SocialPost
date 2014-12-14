@@ -46,10 +46,20 @@ input {
     margin-right: 10px;
     margin-top: 10px;
 }
-input.text {
+input.text1, input.text2 {
     padding: 4px;
     border-radius:1px;
     width: 150px;
+}
+input.text2 {
+    margin-right: 0;
+}
+input.text3 {
+    background: rgba(0,0,0,0);
+    height: 1px;
+    width: 1px;
+    margin-left: 0;
+    margin-right: 0;
 }
 input.sign {
     background: #fee94f;
@@ -57,6 +67,7 @@ input.sign {
     background: -moz-linear-gradient(top,#fee94f 0,#fd9a0f 100%);
     background: linear-gradient(top,#fee94f 0,#fd9a0f 100%);
     border: 1px solid #fa2;
+    top: -50px;
 }
 input.login {
     background: #FFFFFF;
@@ -173,6 +184,7 @@ input.login {
 }
 #postholder{
     background-color: rgba(0,0,0,0.4);
+    position: absolute;
     //border: 1px solid grey;
 }
 #postform {
@@ -195,15 +207,30 @@ input.login {
     background: #FFFFFF;
 }
 #posts {
-    //height: 80%;
-    border: 1px solid grey;
+    border: 3px solid;
     border-radius: 15px;
     position: absolute;
     left: 1%;
     right: 1%;
-    top: 2%;
+    height: 80%;
     bottom: 15%;
     background: #FFFFFF;
+    overflow-y: scroll;
+}
+#eachpostcontainer {
+    position: relative;
+    margin-top: 10px;
+    left: 5%;
+    width: 90%;
+    text-align:left;
+}
+#eachpost {
+    display: inline-block;
+    background: white;
+    color: #333;
+    border: 2px solid #3399FF;
+    border-radius: 15px;
+    padding:3px 5px 3px 5px;
 }
 
 
@@ -211,7 +238,7 @@ input.login {
 
 .banner-hold {
     width: 100%;
-    min-width: 665px;
+    min-width: 730px;
     height: 50px;
     background: #333;
     background: linear-gradient(top, #484848 50%, #333 100%);
@@ -233,7 +260,7 @@ input.login {
     text-align: center;
     vertical-align:middle;
     line-height: 50px;
-    margin: 0;
+    margin-left:5%;
 }
 .banner-element {
     width: 10%;
@@ -243,7 +270,7 @@ input.login {
     width: 15%;
     min-width:250px;
     float:right;
-    margin-right: 3px;
+    margin-right: 3%;
 }
 .user-options, .user-profile {
     float: right;

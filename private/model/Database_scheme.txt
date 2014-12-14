@@ -130,7 +130,30 @@ THIS WORKS --------
 
 db.users.insert({name:"Sam5", post3:[{loc : { type : "Point",coordinates : [ 40.0000000 , 5 ]}},{loc: {type: "Point",coordinates:[60,60]}}]})
 db.users.insert({name:"Sam6", post3:[{loc : { type : "Point",coordinates : [ 40.0000001 , 5 ]}},{loc: {type: "Point",coordinates:[61,60]}}]})
+
+
+db.users.insert({name:"Sam6", email:"new1", posts:[{blank:"blank",loc : { type : "Polygon",coordinates : [[[ 40 , 5 ],[41,5],[41,6],[40,6],[40,5]]]}}]})
+
+db.users.insert({name:"Sam7", posts:[{loc : { type : "Box",coordinates : [[ 40 , 5 ],[41,6]]}}]})
+
 db.users.ensureIndex({"post3.loc":"2dsphere"})
 
 db.users.find({"post3.loc":{$near:{$geometry:{type:"Point",coordinates:[60,60]}},$maxDistance:10000000000}}) ---THIS WORKS
+db.users.find({"posts.loc":{$near:{$geometry:{type:"Point",coordinates:[60,60]}},$maxDistance:10000000000000000000}})
 
+
+users -> user -> email
+                password
+                firstname
+                lastname
+                phonenumber
+                posts array
+                friends array
+
+
+db.users.insert({email:"andosguy@yahoo.com",
+password:"password",
+firstname:"Sam2",
+lastname:"Seng2",
+posts:[{date:1,text:"first"},{date:2,text:"second"}],
+friends:["id1","id2","id3","id4"]})

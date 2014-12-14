@@ -17,8 +17,9 @@
                 <div id="loginbox">
                     <h2>Sign In</h2>
                     <form action="" method="post">
-                        <input class="text" type="email" placeholder="Email" name="email" required autofocus><br>
-                        <input class="text" type="password" placeholder="Password" name="password"required><br>
+                        <input class="text1" type="email" placeholder="Email" name="email" required autofocus><br>
+                        <input class="text2" type="password" placeholder="Password" name="password"required>
+                        <input class="text3" type="text" name="zipcode"><br>
                         <?php if (isset($error)) {echo "Incorrect";}?>
                         <input class="login" type="submit" value="Login">
                     </form>

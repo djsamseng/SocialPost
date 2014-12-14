@@ -1,0 +1,1054 @@
+html {
+    display: block;
+}
+body {
+    /* background: -webkit-radial-gradient(red, green, blue);  Safari
+    background: -o-radial-gradient(red, green, blue); For Opera 11.1 to 12.0
+    background: -moz-radial-gradient(red, green, blue); For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FDFEFF, #FDFEFF, #FDFEFF); /* Standard syntax (must be last) */
+    font-family: "Helvetica Neue",Arial,sans-serif;
+    margin: 0;
+}
+
+#back {
+    /* background: -webkit-radial-gradient(red, green, blue);  Safari
+    background: -o-radial-gradient(red, green, blue); For Opera 11.1 to 12.0
+    background: -moz-radial-gradient(red, green, blue); For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FDFEFF, #FDFEFF, #FDFEFF); /* Standard syntax (must be last) */
+    width: 100%;
+    min-width: 1115px;
+    //border: 2px solid red;
+    text-align: center;
+}
+#close {
+    width: 80%;
+    margin-left: 10%;
+    //border: 5px solid blue;
+}
+#mainleft,#maincenter,#mainright,#profilemainleft,#profilemaincenter {
+    margin-top: 60px;
+    float: left;
+    color: #3399FF;
+    //border: 2px solid green;
+    position: relative;
+}
+#mainleft {
+    width: 18%;
+    //border: 2px solid grey;
+    //margin: 0px;
+    background: #F8F8F8;
+}
+#profilemainleft {
+    width: 30%;
+    background: #F8F8F8;
+}
+#mainleft {
+    //border: 1px solid red;
+}
+#maincenter,#profilemaincenter {
+    width: 70%;
+    background: #FFFFFF;
+    margin-left: 3%;
+    margin-right: 1%;
+    min-height: 500px;
+    //border: 1px solid red;
+}
+#profilemaincenter {
+    width: 58%;
+}
+#mainright {
+    //float: right;
+    width: 10%;
+    height: 100px;
+    border: 1px solid red;
+}
+.clear {
+    clear:both;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+h1 {
+    text-align: center;
+    vertical-align:middle;
+    line-height: 80px;
+    margin: 0;
+
+}
+
+h2, h3 {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    color: #3399FF;
+    vertical-align:middle;
+    line-height: 50px;
+}
+
+.tail {
+    border-radius:3px;
+    background: #3399FF;
+    background-color: rgba(0,0,0,0.4);
+    color: #FFFFFF;
+    text-decoration:none;
+    padding: 8px;
+}
+#profpicholder {
+    width: 90%;
+    //border: 3px solid white;
+    margin-left: 5%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.profpic {
+    width: inherit;
+}
+.requests {
+    width: 95%;
+    min-height: 100px;
+    //border: 1px solid blue;
+}
+/* --------- LEFT NAVIGATION PANEL --------- */
+.lpanelbodyfixed,.lpanelbodyfixedhidden {
+    position: fixed;
+    //border: 3px solid blue;
+    width: 110px;
+    //min-width: 190px;
+    height: 300px;
+    z-index: 1;
+    left: 10px;
+}
+.lpanelbodyfixedhidden {
+    left: -60px;
+}
+.lpanelbodylink {
+    position: relative;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 300px;
+    //visibility: hidden;
+    margin-left: -23%;
+    background: #F0F0F0;
+}
+.lpanelbody {
+    position: absolute;
+    top: 0;
+    width: 60%;
+    margin-left: -10%;
+    margin-top: 10px;
+}
+.leftpanelpicholder {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border: 1px solid grey;
+    color: #333;
+}
+.leftpanelpic {
+    max-width: 100%;
+    max-height: 100%;
+}
+/* --------- LEFT INFO ------------ */
+.leftbody {
+    width: 100%;
+    min-height: 200px;
+    //border: 1px solid blue;
+}
+.leftinfo {
+    width: 100%;
+    background: #F0F0F0;
+    border: 1px solid grey;
+    margin-top: 10px;
+    position: relative;
+    min-height: 20px;
+}
+.leftuserinfo {
+    width: 100%;
+    //border: 1px solid red;
+}
+.leftpicholder {
+    width: 40%;
+    height: 0;
+    padding-bottom: 40%;
+    border: 1px solid grey;
+    float: left;
+}
+.leftpic {
+    max-height: 100%;
+    max-width: 100%;
+}
+.leftuserinfo {
+    width: 55%;
+    border: 1px solid grey;
+    float: left;
+    color: #333;
+}
+.leftuserinfotext {
+    color: #333;
+}
+.leftusersubinfo {
+    text-align: left;
+    margin-left: 5%;
+}
+.leftfeedselect {
+    min-height: 30px;
+    border: 1px solid grey;
+    color: #333;
+}
+#leftlocation {
+    min-height: 100px;
+}
+#leftgetlocation {
+    color: #3399FF;
+}
+#leftmap {
+    min-height: 50px;
+    border: 1px solid #333;
+}
+
+/* --------- CENTER FEED ----------- */
+.centerheaderhold {
+    width: 100%;
+    //padding: 20px 20px 20px 20px;
+    border: 1px solid grey;
+}
+.centerheaderinside {
+    padding: 10px 20px 0px 20px;
+}
+.centerfeedselecthold {
+    width: 100%;
+    height: 20px;
+    text-align:left;
+    border: 1px solid grey;
+    background: #F0F0F0;
+}
+.centerfeedselect {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    border: 1px solid grey;
+    float:left;
+    color: #333;
+}
+.newpostselectholder {
+    width: 97.5%;
+    height: 110px;
+    border: 1px solid white;
+    padding-left: 20px;
+}
+.newpostselect {
+    width: 70px;
+    height: 100px;
+    //border: 1px solid grey;
+    float: left;
+    margin: 10px 10px 0px 10px;
+    color: #333;
+}
+.newposticonholder {
+    width: 70px;
+    height: 70px;
+    border: 1px solid grey;
+}
+/* ------ NEW POST INPUT ------- */
+.newinputall, .newinputallnone {
+    width: 100%;
+    height: 100px;
+    //border: 1px solid grey;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.newinputallnone {
+    display: none;
+}
+.newinputall {
+    display: block;
+}
+.newinputbody {
+    width: 100%;
+    border: 1px solid grey;
+    height: 100px;
+    padding-top: 10px;
+}
+.textbody {
+    width: 100%;
+    height: 50px;
+}
+.undertextbody {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+}
+#addlocation {
+    color: #3399FF;
+    position:relative;
+}
+#addmap {
+    min-height: 50px;
+    border: 1px solid #333;
+}
+.newinputtext {
+    border: 1px solid grey;
+    height: 50px;
+    width: 90%;
+    font-size: 120%;
+    overflow-y: scroll;
+}
+.newinputsubmit {
+    background: #fee94f;
+    background: -webkit-linear-gradient(top,#fee94f 0,#fd9a0f 100%);
+    background: -moz-linear-gradient(top,#fee94f 0,#fd9a0f 100%);
+    background: linear-gradient(top,#fee94f 0,#fd9a0f 100%);
+    border: 1px solid #fa2;
+    width: 60px;
+    height: 25px;
+    //top: -50px;
+    float: right;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+#triangleup {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid grey;
+    //margin-left: 54px;
+    position: absolute;
+    top: -12px;
+}
+.triangletext {
+    margin-left:54px;
+}
+.trianglephoto {
+    margin-left: 144px;
+}
+.trianglevideo {
+    margin-left: 234px;
+}
+.trianglelocation {
+    margin-left: 324px;
+}
+.trianglelink {
+    margin-left: 414px;
+}
+.trianglelinkright {
+    right: 50px;
+}
+#innertriangleup {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    //margin-left: 56px;
+    position: absolute;
+    top: -9px;
+}
+.innertriangletext {
+    margin-left:56px;
+}
+.innertrianglephoto {
+    margin-left: 146px;
+}
+.innertrianglevideo {
+    margin-left: 236px;
+}
+.innertrianglelocation {
+    margin-left: 326px;
+}
+.innertrianglelink {
+    margin-left: 416px;
+}
+.innertrianglelinkright {
+    right: 52px;
+}
+.innerposts {
+    margin-top: 10px;
+    width: 100%;
+    margin: 0;
+    //border: 3px solid grey;
+}
+
+
+/* ------ EACH POST IN POST HOLDER ------- */
+.eachpostholder {
+    //width: 95%;
+    width: 100%;
+    min-height: 80px;
+    margin-top: 10px;
+    //margin-left:2%;
+    color: #333;
+    border: 1px solid grey;
+    //padding: 5px 5px 5px 5px;
+    text-align: left;
+}
+.eachpostinside {
+    padding: 5px 5px 5px 5px;
+}
+.postbody {
+    //border: 1px solid red;
+    //float: left;
+    //width: 79%;
+    margin-left: 120px;
+    position: relative;
+    margin-top: 20px;
+}
+.postbodyleft {
+    margin-left: 10px;
+    margin-right: 120px;
+    position: relative;
+    margin-top: 20px;
+}
+.postleftholder {
+    //border: 1px solid red;
+    float: left;
+    position: relative;
+}
+.postleftholderright {
+    float: right;
+    position: relative;
+}
+.postbynametext {
+    color: #3399FF;
+    text-align: left;
+}
+.post-pic-thumb-holder {
+    height: 50px;
+    width: 50px;
+    border: 1px solid grey;
+    //position: absolute;
+    text-align: center;
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.post-pic-thumb {
+    max-height: 100%;
+    max-width: 100%;
+}
+.postbyname {
+    //margin-left: 60px;
+    top: 5px;
+    color:
+}
+.eachpost {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 3px 5px 3px 5px;
+    //width: 60%;
+    min-height: 30px;
+    //margin-left: 60px;
+    text-align:left;
+}
+.optionsholder, .commentoptionsholder {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: #F0F0F0;
+    border: 1px solid grey;
+    opacity: 0.3;
+}
+.commentoptionsholder {
+    top: 0;
+    right: 80px;
+}
+.optionslistholder {
+    position: relative;
+    height: 40px;
+    width: 60px;
+    border: 1px solid blue;
+    margin-top: 20px;
+    right: 40px;
+    background: #F0F0F0;
+    border: 1px solid grey;
+    visibility: hidden;
+}
+.postoption {
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    color: #3399FF;
+}
+.optionsholder:hover .optionslistholder, .optionsholder:hover, .commentoptionsholder:hover .optionslistholder, .commentoptionsholder:hover {
+    visibility: visible;
+    opacity: 1;
+}
+.postbottomholder {
+    position: relative;
+    text-align:right;
+    margin-right:10px;
+    font-size: 80%;
+    min-height: 30px;
+    position: relative;
+}
+.postdateholder {
+    float: right;
+    //border: 1px solid blue;
+}
+.postdate {
+    float: right;
+}
+.postdate:hover + .expiredate, .expiredate:hover {
+    //font-size: 40%;
+    visibility: visible;
+}
+.expiredate {
+    position: absolute;
+    visibility: hidden;
+    right: 0;
+    top: -40px;
+    background: #FFFFFF;
+    min-width: 100px;
+    min-height: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    text-align: center;
+}
+.postlocationholder {
+    //border: 1px solid blue;
+    float: right;
+    margin-right: 5px;
+}
+.locationicon {
+    height: 12px;
+    //width: 20px;
+    //border: 1px solid grey;
+    float: left;
+}
+#locationinfo {
+    position: absolute;
+    top: 60px;
+    background: #FFFFFF;
+    min-width: 200px;
+    width: 60%;
+    left: 15%;
+    min-height: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    text-align: center;
+    z-index: 2;
+    display: none;
+    color: #3399FF;
+}
+.commentactionholder {
+    float:left;
+    //height: 12px;
+    width: 30%;
+    //border: 1px solid blue;
+    //margin-left: 60px;
+    text-align: left;
+    padding-left: 15px;
+}
+/* --------- COMMENTS, LIKES, DISLIKES ---------- */
+
+.commentsholder, .commentsholderleft {
+    min-height: 50px;
+    //border: 1px solid blue;
+    margin-top: 10px;
+    position: relative;
+}
+.commentsholder {
+    margin-left: 120px;
+}
+.commentsholderleft {
+    margin-left: 10px;
+    margin-right: 120px;
+}
+.commentinfo {
+    height: 20px;
+    //border: 1px solid blue;
+    padding-left: 5px;
+    margin-left: 60px;
+    font-size: 80%;
+}
+.eachcommentholder, {
+    //min-height: 40px;
+    border: 1px solid grey;
+    margin-top: 5px;
+    margin-left: 60px;
+    position: relative;
+}
+.eachcommentholderleft {
+    position: relative;
+}
+.addcommenthold {
+    border: 1px solid grey;
+    min-height: 30px;
+}
+.addcommentpicholder {
+    float:right;
+    width: 30px;
+    height: 30px;
+    border: 1px solid grey;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+.commentsubmit {
+    color: #3399FF;
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+.eachcommentpicholder, .eachcommentpicholderright {
+    width: 30px;
+    height: 30px;
+    border: 1px solid grey;
+    //margin-left: 20px;
+    margin-top: 5px;
+}
+.eachcommentpicholder {
+    float: left;
+}
+.eachcommentpicholderright {
+    float: right;
+    margin-left: 0;
+    //margin-bottom: 20px;
+}
+.commentpic {
+    max-height: 100%;
+    max-width: 100%;
+}
+.eachcommenttext, .eachcommenttextleft {
+    border: 1px solid grey;
+    min-height: 15px;
+    //width: 70%;
+    font-size: 85%;
+}
+.eachcommenttextleft {
+    margin-right: 70px;
+}
+.eachcommentlike, .eachcommentlikeleft {
+    border: 1px solid grey;
+    min-height: 15px;
+    font-size: 80%;
+}
+.eachcommentlikeleft {
+    margin-right: 70px;
+}
+.postline {
+    border: 1px solid grey;
+    margin-top: 5px;
+    margin-left: 5%;
+    width: 90%;
+}
+/* --------- CHAT --------- */
+.chatholder {
+    position: fixed;
+    height: 300px;
+    width: 200px;
+    border: 1px solid grey;
+    bottom: 30px;
+    right: 1px;
+    background: #FFFFFF;
+    display:block;
+}
+.chatholderhidden {
+    display: none;
+}
+.chatheader {
+    width: 100%;
+    height: 30px;
+    color: #333;
+    background: #F0F0F0;
+    border-bottom: 1px solid grey;
+}
+.chatsearch {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+}
+.chatbox {
+    position: relative;
+    height: inherit;
+    width: 200px;
+    //border: 1px solid red;
+    float: right;
+    overflow-y: scroll;
+}
+/* --------- BOTTOM TOOLBAR --------- */
+/* --------- With JavaScript -------- */
+.bottomposition {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    min-width: 1115px;
+}
+.bottomholder {
+    width: 12%;
+    //left: 100%;
+    //border: 1px solid red;
+    position: relative;
+    height: inherit;
+    float: right;
+}
+.outsidetoolbar {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: white;
+    border: 1px solid grey;
+    color: #333;
+}
+
+/* --------- SEARCH ------- */
+.newsearchbox {
+    width: 100%;
+    min-height: 100px;
+    //border: 1px solid blue;
+    margin-top: 20px;
+}
+.searchresultbox {
+    width: 100%;
+    min-height: 400px;
+    margin-top: 10px;
+    //border: 1px solid blue;
+}
+.searchresult {
+    width: 90%;
+    //width: 200px;
+    margin-left: 40px;
+    min-height: 120px;
+    border: 1px solid blue;
+    float:left;
+}
+.searchresultname {
+    float:left;
+    margin-left: 120px;
+}
+.friendshold {
+}
+.searchnamelink {
+    color: #333;
+}
+
+.search-pic-thumb-holder {
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    margin-top: 5px;
+    position: absolute;
+}
+.search-pic-thumb {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* --------- BANNER ------- */
+
+.banner-hold {
+    width: 100%;
+    min-width: 1115px;
+    height: 50px;
+    background: #333;
+    background: linear-gradient(top, #484848 50%, #333 100%);
+    text-align: center;
+    box-shadow: 0px 2px 2px 2px #333;
+    float: right;
+    position: absolute;
+    z-index:1;
+}
+.banner-logo,.banner-element,.banner-user,.user-options,.user-profile,.dropdown {
+    height: 50px;
+    color: #FFFFFF;
+    float: left;
+}
+.banner-logo {
+    width: 200px;
+    float: left;
+    text-align: center;
+    vertical-align:middle;
+    line-height: 50px;
+    margin-left: 5%;
+    //border: 1px solid blue;
+}
+.banner-element {
+    width: 10%;
+    min-width:70px;
+    //border: 1px solid blue;
+}
+.banner-user {
+    width: 15%;
+    min-width:290px;
+    float:right;
+    margin-right: 10%;
+}
+.banner-search {
+    text-align: center;
+    line-height: 50px;
+    vertical-align:middle;
+}
+.banner-search-input {
+    width: 100%;  
+}
+.banner-search-submit {
+    visibility: hidden;
+}
+.user-options, .user-profile {
+    float: right;
+}
+.user-options {
+    width: 80px;
+}
+.user-profile {
+    width: 190px;
+}
+.dropdown-header,.dropdown-element,.dropdown-element-right,.dropdown-header-profile {
+    width: 70px;
+    text-align: center;
+    vertical-align:middle;
+    line-height: 50px;
+    margin: 0;
+}
+.dropdown-header-profile {
+    width: 190px;
+}
+.user-profile:hover,.user-options:hover,.feed:hover,.messages:hover,.mapit:hover {
+    background: #484848;
+}
+.dropdown-header {
+    height: 50px;
+}
+/*.dropdown-element,.dropdown-element-right{
+    height: 50px;
+    display: none;
+    background: #333;
+    width: 150px;
+}*/
+a.drop {
+    display:none;
+}
+.dropdown-element {
+    float: left
+}
+.dropdown-element-right{
+    float: right
+}
+.user-profile:hover > .dropdown-element-right {
+    display: block;
+}
+.user-profile:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+    float: right;
+}
+.user-options:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+    float: right;
+}
+.feed:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+}
+.messages:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+}
+.mapit:hover > a.drop {
+    display: block; 
+    height: 50px;
+    width: 150px;
+    background: #333;
+}
+/* ----------- ----------- */
+/* ----------------------- CONVERSATIONS -------------------------- */
+.newmessageicon {
+    float:right;
+    height: 30px;
+    width: 30px;
+    color: #3399FF;
+    border: 1px solid blue;
+}
+
+/* ----------------- CONVERSATIONS LEFT ----------------- */
+.lefteachholder {
+    width: 100%;
+    height: 50px;
+    border: 1px solid grey;
+    font-size: 80%;
+    color: #333;
+}
+.lefteachnames {
+    width: 100%;
+    height: 20px;
+    border: 1px solid blue;
+}
+.lefteachpic {
+    height: 30px;
+    width: 30px;
+    float: left;
+    border: 1px solid blue;
+    overflow: scroll;
+}
+.lefteachtext {
+    height: 30px;
+    margin-left: 30px;
+    border: 1px solid blue;
+    text-align: left;
+}
+/* ------------------ CONVERSATIONS MAIN ----------------- */
+.maineachholder {
+    width: 100%;
+    height: 80px;
+    border: 1px solid grey;
+    color: #333;
+    margin-top: 10px;
+}
+.maineachnames {
+    width: 100%;
+    height: 20px;
+    border: 1px solid blue;
+}
+.maineachpic {
+    height: 60px;
+    width: 60px;
+    border: 1px solid blue;
+    float: left;
+}
+.maineachtext {
+    height: 50px;
+    margin-left: 60px;
+    border: 1px solid blue;
+    text-align: left;
+    padding: 5px 20px 5px 20px;
+    overflow: scroll;
+}
+
+/* -------------- NEW MESSAGE ----------------- */
+.newmessageinfoall {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid grey;
+    margin-top: 5px;
+}
+
+#messagefriends {
+    min-height: 180px;
+    margin: 20px 40px 0 0;
+    //border: 1px solid grey;
+}
+.mfriendsearchresult {
+    width: 140px;
+    border: 1px solid blue;
+    height: 120px;
+    margin-left: 40px;
+    float: left;
+}
+.meachfriendpicholder {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 0 auto;
+    border: 1px solid grey;
+}
+.msearchname {
+    margin-top: 0;
+}
+
+/* ------------------ PROFILE ------------------ */
+
+.profsubinfo {
+    color: #333;
+    margin: 10px 5% 10px 5%;
+    padding-left: 5%;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+#profileprofpicholder {
+    //width: 90%;
+    border: 3px solid white;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align:center;
+}
+.profileprofpic {
+    width: 90%;
+}
+.profileprofsubinfo {
+    color: #333;
+    margin: 10px 5% 10px 5%;
+    padding-left: 5%;
+    border: 1px solid grey;
+    border-radius: 5px;
+
+}
+
+.coverpicture {
+    height: 100px;
+    margin-top: 20px;
+    width: 97%;
+    margin-left: 1%;
+    border: 2px solid grey;
+}
+
+/* -----  Profile Submenu ------ */
+.profilemenu {
+    width: 95%;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 2%;
+}
+.profmenuposts,.profmenuinfo,.profmenuphotos,.profmenufriends {
+    min-width: 50px;
+    height: 100%;
+    margin: 0 0 0 0;
+    background-color:#F0F0F0;
+    border: 1px solid #333;
+    //background-color:#3399FF;
+}
+.profmenuposts:hover,.profmenuinfo:hover,.profmenuphotos:hover,.profmenufriends:hover{
+    background-color: #FFFFFF;
+}
+/* --------- Posts Submenu ------------*/
+.allposts {
+    min-height: 500px;
+    margin-top: 5px;
+}
+/* --------- Friends Submenu -----------*/
+.friendshold {
+}
+.friendnamelink {
+    color: #333;
+}
+
+.friend-pic-thumb {
+    max-height: 100%;
+    max-width: 100%;;
+}
+.friend-pic-thumb-holder {
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+.friendbox {
+    height: 150px;
+    width: 200px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    float:left;
+}
+
+
+

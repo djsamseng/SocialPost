@@ -8,16 +8,24 @@ if (isset($_SESSION["id"]) && $_SESSION["id"] > 0 && isset($_SESSION["auth"]) &&
         $npassword = htmlspecialchars($_POST["npassword"]);
         $nfirstname = htmlspecialchars($_POST["nfirstname"]);
         $nlastname = htmlspecialchars($_POST["nlastname"]);
-        require_once('../private/model/mongodatabase.php');
-        $info = create($nemail,$npassword,$nfirstname,$nlastname);
-        if (isset($info) && $info["auth"]) {
-            $_SESSION['auth'] = true;
-            $_SESSION['id'] = $info["id"];
-            $_SESSION['firstname']=$info["firstname"];
-            $_SESSION['lastname'] = $info["lastname"];
-            header("Location: index.php");
+        $zip = htmlspecialchars($_POST["zipcode"]);
+        if (strlen($zip) > 0) {
+            header("Location: index.php?page=create2");
+        }
+        if (validLogin($nemail,$npassword)) {
+            require_once('../private/model/mongodatabase.php');
+            $info = create($nemail,$npassword,$nfirstname,$nlastname);
+            if (isset($info) && $info["auth"]) {
+                $_SESSION['auth'] = true;
+                $_SESSION['id'] = $info["id"];
+                $_SESSION['firstname']=$info["firstname"];
+                $_SESSION['lastname'] = $info["lastname"];
+                header("Location: index.php");
+            } else {
+                header("Location: index.php?er=emailtaken");
+            }
         } else {
-            header("Location: index.php?er=emailtaken");
+            header("Location:index.php?er=emailtaken");//FIX THIS STUFF LATER
         }
     } else {
         render('login');

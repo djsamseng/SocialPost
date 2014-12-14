@@ -1,5 +1,5 @@
 <div class="banner-hold">
-                <div class="banner-logo">Logo here</div>
+                <a href="index.php"><div class="banner-logo">Logo here</div></a>
                 <div class="banner-element">
                     <div class="feed">
                         <a href="#"><div class="dropdown-header">Feed</div></a>

@@ -16,9 +16,15 @@
                 <div id="outsidepost">
                 <div id="postholder">
                     <div id="posts">
-                        Post1 <br>
-                        Post2 <br>
-                        Post3 <br>
+                        <?php if (isset($posts)&& $posts != null){
+                            foreach ($posts as $post) {
+                                ?> <div id="eachpostcontainer"><div id="eachpost">
+                                <?php echo $post["text"];?>
+                                </div></div>
+                            <?php
+                            }
+                        }
+                        ?>
                     </div>
                     <div id="postform">
                         <form>
@@ -33,19 +39,21 @@
                 <div id="loginbox">
                     <h2>Sign In <?php// echo htmlspecialchars($_GET["page"])=="create";?></h2>
                     <form action="" method="post">
-                        <input class="text" type="email" placeholder="Email" name="email" required autofocus><br>
-                        <input class="text" type="password" placeholder="Password" name="password"required><br>
-                        <?php if (isset($error)) {echo "Incorrect";}?>
+                        <input class="text1" type="email" placeholder="Email" name="email" required autofocus><br>
+                        <input class="text2" type="password" placeholder="Password" name="password"required>
+                        <input class="text3" type="text" name="zipcode"><br>
+                        <?php if (isset($_GET["er"])&&htmlspecialchars($_GET["er"])=="invalid") {echo "Invalid";}?>
                         <input class="login" type="submit" value="Login">
                     </form>
                 </div>
                 <div id="createbox">
                     <h3>Create An Account</h3>
                     <form action="?page=create" method="post">
-                        <input class="text" type="text" placeholder="First Name" name="nfirstname"required><br>
-                        <input class="text" type="text" placeholder="Last Name" name="nlastname"required><br>
-                        <input class="text" type="email" placeholder="Email" name="nemail" required><br>
-                        <input class="text" type="password" placeholder="Password" name="npassword"required><br>
+                        <input class="text1" type="text" placeholder="First Name" name="nfirstname"required><br>
+                        <input class="text1" type="text" placeholder="Last Name" name="nlastname"required><br>
+                        <input class="text1" type="email" placeholder="Email" name="nemail" required><br>
+                        <input class="text2" type="password" placeholder="Password" name="npassword">
+                        <input class="text3" type="text" name="zipcode"><br>
                         <input class="sign" type="submit" value="Sign Up">
                         <?php if (isset($_GET["er"])&& htmlspecialchars($_GET["er"])=="emailtaken") {echo "Email taken";}?>
                     </form>
